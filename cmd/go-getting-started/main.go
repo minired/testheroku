@@ -12,7 +12,8 @@ func main() {
 	port := os.Getenv("PORT")
 
 	if port == "" {
-		log.Fatal("$PORT must be set")
+	    port = "4747"
+        log.Println("[-] No PORT environment variable detected. Setting to ", port)
 	}
 
 	router := gin.New()
